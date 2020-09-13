@@ -7,11 +7,11 @@ angular.module('LunchCheck', [])
 LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
   $scope.checkDishes = function () {
-    var n = countDishes($scope.dishes);
+    var n = countIt($scope.dishes);
     $scope.message = makeMessage(n);
   };
 
-  function countDishes(dishes) {
+  function countIt(dishes) {
     var cnt = 0;
     if (dishes) {
       var array = dishes.split(',');
